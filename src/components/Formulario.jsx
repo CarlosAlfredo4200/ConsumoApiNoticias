@@ -7,10 +7,10 @@ const Formulario = () => {
     <div className="contenedor">
       <div className="formulario">
         <label>
-          <h3 >Categorias</h3>
+          <h2>Categorias</h2>
         </label>
         <select className="formulario-select">
-          <option value=""> Selecciona la Marca </option>
+          <option value=""> Selecciona la categoria </option>
           {CATEGORIAS.map((data) => (
             <option
               key={data.id}
@@ -18,6 +18,8 @@ const Formulario = () => {
             >{data.label}</option>
           ))}
         </select>
+
+        <button className="formulario-btn">Buscar noticia</button>
       </div>
     </div>
   );
