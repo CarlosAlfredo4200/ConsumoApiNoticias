@@ -14,18 +14,22 @@ const NoticiasProvider = ({children}) => {
     const [totalnoticias, setTotalnoticias] = useState(0)
     
     const [adelante, setAdelante] = useState(1)
+    const [atras, setAtras] = useState(1)
      
     const handleChangeCategoria = (e) =>{
             setCategoria(e.target.value)
     }
 
     const handleAdelante = () => {
-       
       setAdelante( adelante + 1)
-      
     }
 
-     console.log(totalnoticias);
+    const handleAtras = () => {
+      setAdelante( adelante - 1)
+    }
+
+
+     
 
     useEffect(() => {
       const consultarApi =async () =>{
@@ -44,7 +48,7 @@ const NoticiasProvider = ({children}) => {
 
   return (
      <NoticiasContext.Provider value={{
-        categoria,handleChangeCategoria, noticias, totalnoticias, handleAdelante
+        categoria,handleChangeCategoria, noticias, totalnoticias, handleAdelante, handleAtras
      }}>
 
             {children}

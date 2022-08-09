@@ -87,3 +87,36 @@ h1,h2,h3,h4{
 .enlaces{
     text-align: center;
 }
+
+.paginacion{
+    width: 100%;
+    text-align: center;
+    margin: 1rem 2rem 3rem 2rem;
+    
+}
+.pag-btn{
+    
+    padding: 15px 20px;
+    margin-right: 5px;
+    text-transform: uppercase;
+    font-weight: 900;
+    border-radius: 4px;
+    font-size: 18px;
+    overflow: hidden;
+    transition: all 500ms ease;
+    background-color: transparent;
+    border: 2px solid rgb(188, 188, 189);
+    z-index: 0;
+    cursor: pointer;
+}
+
+ 
+
+ 
+.pag-btn:hover{
+     background-color: aquamarine;
+}
+
+.pag-btn:hover::before{
+    width: 100%;
+}

@@ -6,10 +6,10 @@ import Noticia from './Noticia';
 const ListadoNoticias = () => {
    
 
-    const { noticias, totalnoticias, setPagina, handleAdelante} = useNoticas();
+    const { noticias, handleAdelante, handleAtras} = useNoticas();
 
     
-    
+
   return (
     <div> 
         <div><h1>Ultimas noticias</h1></div>
@@ -21,9 +21,10 @@ const ListadoNoticias = () => {
            }
         </div>
 
-        <div>
+        <div className='paginacion'>
          
-          <button onClick={handleAdelante}>Adelante</button>
+          <button className='pag-btn'   onClick={handleAtras}>Atras</button>
+          <button className='pag-btn'   onClick={handleAdelante}>Adelante</button>
            
         </div>
     </div>
