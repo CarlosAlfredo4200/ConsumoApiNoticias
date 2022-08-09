@@ -1,4 +1,4 @@
-import axios from 'axios'
+
 import React,{ useState, useEffect, createContext} from 'react'
 
 
@@ -32,13 +32,14 @@ const NoticiasProvider = ({children}) => {
      
 
     useEffect(() => {
-      const consultarApi =async () =>{
+      const consultarApi = async () => {
         
             const url = `https://newsapi.org/v2/top-headlines?country=co&pageSize=10&page=${adelante}&category=${categoria}&apiKey=3f67b8033c414a5498a61c57ee1d1fc7`
 
-            const {data} = await axios(url);
-            setNoticias(data.articles);
-            setTotalnoticias(data.totalResults)
+            const data = await fetch(url);
+            const noti = await data.json()
+            setNoticias(noti.articles);
+            setTotalnoticias(noti.totalResults)
 
       }
       consultarApi()
