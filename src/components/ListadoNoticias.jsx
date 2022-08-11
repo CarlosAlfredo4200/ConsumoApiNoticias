@@ -6,7 +6,7 @@ import Noticia from './Noticia';
 const ListadoNoticias = () => {
    
 
-    const { noticias, handleAdelante, handleAtras} = useNoticas();
+    const { noticias, handleAdelante, handleAtras, juegosEd} = useNoticas();
 
     
 
@@ -15,18 +15,13 @@ const ListadoNoticias = () => {
         <div><h1>Ultimas noticias</h1></div>
         <div className='contenedor conenedor-noticias'> 
            {
-            noticias.map((ntc) =>(
-              <Noticia key={ntc.url} ntc={ntc}/>
+            juegosEd.map((play) =>(
+              <Noticia key={play.id} ntc={play}/>
             ))
            }
         </div>
 
-        <div className='paginacion'>
-         
-          <button className='pag-btn'   onClick={handleAtras}>Atras</button>
-          <button className='pag-btn'   onClick={handleAdelante}>Adelante</button>
-           
-        </div>
+        
     </div>
   )
 }

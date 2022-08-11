@@ -1,12 +1,17 @@
 import React from "react";
 
 const Noticia = ({ ntc }) => {
-  const { urlToImage, url, title, description, source } = ntc;
+  const { id, title, img,desarrollado,genero,url, descripcion } = ntc;
   return (
     <div className="noticia-card">
-      <img className="noticia-imagen" src={urlToImage} alt="img" />
-      <h3 className="noticia-titulo">{title}</h3>
-      <p className="noticia-descripcion"> {description}</p>
+      <img className="noticia-imagen" src={img} alt="img" />
+
+       
+      <span className="span">Nombre del juego:</span>
+      <h2 className="noticia-titulo"> {title}</h2>
+      <p className="noticia-descripcion"><span className="span">Desarrollador:</span> {desarrollado}</p>
+      <p className="noticia-descripcion"><span className="span">Genero:</span> {genero}</p>
+      <p className="noticia-descripcion"><span className="span">Descripción:</span> {descripcion}</p>
       <a  className="a" href={url} target="_blank">
         <p className="enlaces">Leer mas...</p>
       </a>
@@ -15,3 +20,5 @@ const Noticia = ({ ntc }) => {
 };
 
 export default Noticia;
+
+ 
