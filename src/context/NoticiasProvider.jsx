@@ -46,7 +46,7 @@ const NoticiasProvider = ({children}) => {
             const url = `https://free-to-play-games-database.p.rapidapi.com/api/games?category=${categoria}`;
             const data = await fetch(url, options);
             const juegos = await data.json()
-            console.log(juegos);
+            
             const juego = juegos.slice(0, limit).map( play => ({
               id:play.id,
               title:play.title,
@@ -54,10 +54,10 @@ const NoticiasProvider = ({children}) => {
               desarrollado:play.developer,
               genero:play.genre,
               descripcion:play.short_description,
-              ulr:play.game_url
+              ulrPlay:play.game_url
 
             }))
-            console.log(categoria);
+            
              setjuegosEd(juego)
             // setNoticias(noti.articles);
             // setTotalnoticias(noti.totalResults)

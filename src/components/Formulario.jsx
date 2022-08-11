@@ -9,7 +9,7 @@ const Formulario = () => {
     <div className="contenedor">
       <div className="formulario">
         <label>
-          <h2>Categorias</h2>
+          <h3>Categorias</h3>
         </label>
         <select
           onChange={handleChangeCategoria}

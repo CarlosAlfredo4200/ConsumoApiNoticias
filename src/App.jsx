@@ -7,7 +7,8 @@ function App() {
   return (
     <NoticiasProvider>
       <div>
-        <h1>Buscador de Noticias</h1>
+        <h2 className="title">MEJORES JUEGOS DEL MOMENTO</h2>
+        
         <Formulario />
       </div>
       <ListadoNoticias />

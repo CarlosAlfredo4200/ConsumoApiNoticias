@@ -12,7 +12,7 @@ const ListadoNoticias = () => {
 
   return (
     <div> 
-        <div><h1>Ultimas noticias</h1></div>
+        <div><h2 className='title-top'>TOP 10</h2></div>
         <div className='contenedor conenedor-noticias'> 
            {
             juegosEd.map((play) =>(
